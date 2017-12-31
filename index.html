@@ -1,0 +1,560 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Google Fonts up in dis bish -->
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Cantarell:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" href="#">BTM Bidlist</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right" role="form">
+          <div class="form-group">
+            <input type="text" placeholder="Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Sign in</button>
+        </form>
+      </div>
+</div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Structural</h1>
+            <p>Get your bids sorted</p>
+            <!-- First Sorting Input -->
+            <div class="col-sm-3 col-xs-6 no-padding-left">
+              <div class="dropdown">
+                <label for="dropdownMenu1">Sort</label>
+                <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Dropdown
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="#">Date</a></li>
+                  <li><a href="#">Estimator</a></li>
+                  <li><a href="#">Project Name</a></li>
+                  <li><a href="#">Total Bid Amount</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Date Selector -->
+            <div class="col-sm-3 col-xs-6 no-padding-left">
+              <div class="container">
+                  <div class="row">
+                          <div class="form-group">
+                              <label for="datetimepicker1">Date</label>
+                              <div class='input-group date' id='datetimepicker1'>
+                                  <input type='text' class="form-control" />
+                                  <span class="input-group-addon">
+                                      <span class="glyphicon glyphicon-calendar"></span>
+                                  </span>
+                              </div>
+                          </div>
+                      <script type="text/javascript">
+                          $(function () {
+                              $('#datetimepicker1').datetimepicker();
+                          });
+                      </script>
+                  </div>
+              </div>
+            </div>
+
+
+            <!-- Third Sorting Input -->
+            <div class="col-sm-3 col-xs-6 no-padding-left">
+              <div class="dropdown">
+                <label for="dropdownMenu2">Stage</label>
+                <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Bid/Budget
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="#">Lost</a></li>
+                  <li><a href="#">Won</a></li>
+                  <li><a href="#">Pass</a></li>
+                  <li><a href="#">Bid</a></li>
+                  <li><a href="#">Budget</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+            <!-- Fourth Sorting Input - Estimator -->
+            <div class="col-sm-3 col-xs-6 no-padding-left no-padding-right">
+              <div class="dropdown">
+                <label for="dropdownMenu3">Estimator</label>
+                <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Estimator
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                  <!-- Repeat Estimators here -->
+                  <li><a href="#">All</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Jumbotron -->
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Start Job Block -->
+            <div class="col-xs-12 well">
+              <!-- Bid Title Section -->
+              <h2>Cal Water Cooler Buildings &nbsp;
+                <span class="badge">COM</span>
+                <span class="badge">MET</span>
+              </h2>
+              <!-- End Bid Title Section -->
+
+              <!-- Date Selector -->
+              <div class="col-sm-2 col-xs-6 no-padding-left">
+                <div class="form-group">
+                    <label for="">Date</label>
+                    <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker2').datetimepicker();
+                    });
+                </script>
+              </div>
+              <!-- End Date Selector -->
+
+              <!-- Estimator Selector -->
+              <div class="col-sm-2 col-xs-6">
+                <div class="dropdown">
+                  <label for="">Estimator</label>
+                  <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Estimator
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                    <!-- Repeat Estimators here -->
+                    <li><a href="#">All</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Estimator Selector -->
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Price</label>
+                  <input type="text" class="form-control" placeholder="$0">
+                </div>
+              </div>
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Price</label>
+                  <input type="text" class="form-control" placeholder="$0">
+                </div>
+              </div>
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Margin</label>
+                  <input type="text" class="form-control" placeholder="40%">
+                </div>
+              </div>
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Stage</label>
+                  <select class="form-control" name="">
+                    <option value="">Bid</option>
+                    <option value="">Won</option>
+                    <option value="">Lost</option>
+                    <option value="">Pass</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-xs-12 no-padding">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#projectCollapse" aria-expanded="false" aria-controls="collapseExample">
+                  Show Project Details
+                </button>
+              </div>
+
+
+              <!-- Project Info Dropdown -->
+              <div class="collapse" id="projectCollapse">
+                <!-- Customer Info Container -->
+                <div class="col-xs-12 no-padding">
+                  <h3>Customer Info</h3>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Company</th>
+                              <th scope="col">Contact</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Phone</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Repeat Customer Details Here -->
+                        <tr>
+                          <td>Archy Architects</td>
+                          <td>Arty Archinson</td>
+                          <td>arty@archy-arch.com</td>
+                          <td>(555) 594-1234</td>
+                        </tr>
+                        <!-- End product row -->
+                      </tbody>
+                  </table>
+
+
+                  <button class="btn btn-primary pull-right" type="button" data-toggle="collapse" data-target="#collapseCustomer" aria-expanded="false" aria-controls="collapseCustomer">
+                    Edit Customer
+                  </button>
+                  <div class="collapse" id="collapseCustomer">
+                    <div class="card card-body col-xs-6">
+                      <select class="form-control" name="">
+                        <option value="">ACME Construction</option>
+                        <option value="">Alan Max Construction</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Material Info Container -->
+                <div class="col-xs-12 no-padding">
+                  <h3>Materials</h3>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Manufacturer</th>
+                              <th scope="col">Product</th>
+                              <th scope="col">Qty</th>
+                              <th scope="col">Unit</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Repeat Products Here -->
+                        <tr>
+                          <td>Mckeon</td>
+                          <td>12345</td>
+                          <td>2</td>
+                          <td>Pieces</td>
+                        </tr>
+                        <!-- End product row -->
+                        <tr>
+                          <td>Hufcor</td>
+                          <td>145</td>
+                          <td>6</td>
+                          <td>Pieces</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                  <hr>
+
+                  <button class="btn btn-success pull-right" type="button" data-toggle="collapse" data-target="#collapseMaterial" aria-expanded="false" aria-controls="collapseMaterial">
+                    Add Material
+                  </button>
+                  <!-- New Material Form -->
+                  <div class="collapse" id="collapseMaterial">
+                    <div class="card card-body">
+                      <form class="">
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Manufacturer</label>
+                          <select class="form-control" name="">
+                            <option value="">Hufcor</option>
+                            <option value="">Mckeon</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Model</label>
+                          <input type="text" class="form-control" placeholder="Model">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Qty</label>
+                          <input type="text" class="form-control" placeholder="e.g. 100">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Price</label>
+                          <input type="text" class="form-control" placeholder="$0">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-12">
+                        <button type="submit" class="btn btn-success" style="margin-top: 25px;">Add</button>
+                      </div>
+
+                    </form>
+                    </div>
+                  </div>
+                  <!-- End New Material Form -->
+                </div>
+              </div>
+
+            </div>
+            <!-- End Job Block -->
+
+            <!-- Start Job Block -->
+            <div class="col-xs-12 well">
+              <!-- Bid Title Section -->
+              <h2>Some Other Cool Project &nbsp;
+                <span class="badge">COM</span>
+                <span class="badge">MET</span>
+              </h2>
+              <!-- End Bid Title Section -->
+
+              <!-- Date Selector -->
+              <div class="col-sm-2 col-xs-6 no-padding-left">
+                <div class="form-group">
+                    <label for="">Date</label>
+                    <div class='input-group date' id='datetimepicker2'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker2').datetimepicker();
+                    });
+                </script>
+              </div>
+              <!-- End Date Selector -->
+
+              <!-- Estimator Selector -->
+              <div class="col-sm-2 col-xs-6">
+                <div class="dropdown">
+                  <label for="">Estimator</label>
+                  <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Estimator
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                    <!-- Repeat Estimators here -->
+                    <li><a href="#">All</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Estimator Selector -->
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Price</label>
+                  <input type="text" class="form-control" placeholder="$0">
+                </div>
+              </div>
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Price</label>
+                  <input type="text" class="form-control" placeholder="$0">
+                </div>
+              </div>
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Margin</label>
+                  <input type="text" class="form-control" placeholder="40%">
+                </div>
+              </div>
+
+              <div class="col-sm-2 col-xs-6">
+                <div class="form-group">
+                  <label for="">Stage</label>
+                  <select class="form-control" name="">
+                    <option value="">Bid</option>
+                    <option value="">Won</option>
+                    <option value="">Lost</option>
+                    <option value="">Pass</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-xs-12 no-padding">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#projectCollapse1" aria-expanded="false" aria-controls="collapseExample">
+                  Show Project Details
+                </button>
+              </div>
+
+
+              <!-- Project Info Dropdown -->
+              <div class="collapse" id="projectCollapse1">
+                <!-- Customer Info Container -->
+                <div class="col-xs-12 no-padding">
+                  <h3>Customer Info</h3>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Company</th>
+                              <th scope="col">Contact</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Phone</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Repeat Customer Details Here -->
+                        <tr>
+                          <td>Archy Architects</td>
+                          <td>Arty Archinson</td>
+                          <td>arty@archy-arch.com</td>
+                          <td>(555) 594-1234</td>
+                        </tr>
+                        <!-- End product row -->
+                      </tbody>
+                  </table>
+
+
+                  <button class="btn btn-primary pull-right" type="button" data-toggle="collapse" data-target="#collapseCustomer1" aria-expanded="false" aria-controls="collapseCustomer">
+                    Edit Customer
+                  </button>
+                  <div class="collapse" id="collapseCustomer1">
+                    <div class="card card-body col-xs-6 col-sm-6">
+                      <select class="form-control" name="">
+                        <option value="">ACME Construction</option>
+                        <option value="">Alan Max Construction</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- Material Info Container -->
+                <div class="col-xs-12 no-padding">
+                  <h3>Materials</h3>
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th scope="col">Manufacturer</th>
+                              <th scope="col">Product</th>
+                              <th scope="col">Qty</th>
+                              <th scope="col">Unit</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Repeat Products Here -->
+                        <tr>
+                          <td>Mckeon</td>
+                          <td>12345</td>
+                          <td>2</td>
+                          <td>Pieces</td>
+                        </tr>
+                        <!-- End product row -->
+                      </tbody>
+                  </table>
+                  <hr>
+
+                  <button class="btn btn-success pull-right" type="button" data-toggle="collapse" data-target="#collapseMaterial1" aria-expanded="false" aria-controls="collapseMaterial1">
+                    Add Material
+                  </button>
+
+                  <!-- New Material Form -->
+                  <div class="collapse" id="collapseMaterial1">
+                    <div class="card card-body">
+                      <form class="">
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Manufacturer</label>
+                          <select class="form-control" name="">
+                            <option value="">Hufcor</option>
+                            <option value="">Mckeon</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Model</label>
+                          <input type="text" class="form-control" placeholder="Model">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Qty</label>
+                          <input type="text" class="form-control" placeholder="e.g. 100">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-6">
+                        <div class="form-group">
+                          <label for="">Price</label>
+                          <input type="text" class="form-control" placeholder="$0">
+                        </div>
+                      </div>
+
+                      <div class="col-sm-2 col-xs-12">
+                        <button type="submit" class="btn btn-success" style="margin-top: 25px;">Add</button>
+                      </div>
+
+                    </form>
+                    </div>
+                  </div>
+                  <!-- End New Material Form -->
+                </div>
+              </div>
+
+            </div>
+            <!-- End Job Block -->
+
+        </div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; B.T. Mancini Co., Inc. 2017</p>
+        </footer>
+    </div>
+</body>
+</html>

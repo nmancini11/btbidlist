@@ -1,0 +1,24 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.no-padding {
+  padding: 0px !important;
+}
+
+.no-padding-left {
+  padding-left: 0px !important;
+}
+
+.no-padding-right {
+  padding-right: 0px !important;
+}
+
+.jumbotron {
+  margin-top: 25px;
+}
+
+span {
+  font-family: "Cantarell";
+}
